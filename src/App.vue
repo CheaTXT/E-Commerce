@@ -1,5 +1,5 @@
 <template>
-  <div class="content">
+  <!-- <div class="content">
     <div class="row1">
       <Category
         v-for="category in store.categories"
@@ -22,13 +22,15 @@
           
         />
     </div>
-  </div>
+  </div> -->
+  <Menu />
 </template>
 
 <script>
 import Button from "./components/Button.vue";
 import Category from "./components/Category.vue";
 import Promotion from "./components/Promotion.vue";
+import Menu from "./components/Menu.vue"
 
 import { useStore } from "./stores/store";
 export default {
@@ -37,6 +39,7 @@ export default {
     Button,
     Category,
     Promotion,
+    Menu,
   },
   setup() {
     const store = useStore();
