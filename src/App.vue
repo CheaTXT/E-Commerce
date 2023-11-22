@@ -23,15 +23,15 @@
         />
     </div>
   </div> -->
-  <Menu />
+  <Menu v-for="menu in store.menus" :key="menu.id" :title="menu.title" />
 </template>
 
 <script>
 import Button from "./components/Button.vue";
 import Category from "./components/Category.vue";
 import Promotion from "./components/Promotion.vue";
-import Menu from "./components/Menu.vue"
-
+import Menu from "./components/Menu.vue";
+import { mapState } from "vuex";
 import { useStore } from "./stores/store";
 export default {
   name: "App",
@@ -44,6 +44,9 @@ export default {
   setup() {
     const store = useStore();
     return { store };
+  },
+  computed: {
+    ...mapState(["menu"]),
   },
 };
 </script>

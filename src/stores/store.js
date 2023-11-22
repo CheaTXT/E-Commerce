@@ -28,7 +28,6 @@ export const useStore = defineStore("store", {
         color: "#E7EAF3",
         image: new URL("../assets/images/Cms-03 1.png", import.meta.url),
       },
-      
     ],
     categories: [
       {
@@ -111,7 +110,6 @@ export const useStore = defineStore("store", {
         image: new URL("../assets/images/cat-7 1.png", import.meta.url),
         item: "63",
       },
-      
     ],
     products: [
       {
@@ -127,21 +125,12 @@ export const useStore = defineStore("store", {
         discountPrice: 0,
       },
     ],
-    hellos:[
-    {
-      id: 1,
-      image: new URL("../assets/images/cat-7 1.png", import.meta.url),
-    },
-    {
-      id: 2,
-      image: new URL("../assets/images/cat-7 1.png", import.meta.url),
-    },
-    {
-      id: 3,
-      image: new URL("../assets/images/cat-7 1.png", import.meta.url),
-    }
-      
-    ]
+    menus: [
+      {
+        id: 1,
+        title: "Featured",
+      },
+    ],
   }),
   getter: {},
   action: {},
