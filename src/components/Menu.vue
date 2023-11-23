@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="menu">
     <div class="col1">{{ title }}</div>
     <div class="col2">
       <ul>
@@ -20,18 +20,37 @@ export default {
   props: ["title"]
 };
 </script>
-<style>
+
+<style scoped>
+.menu{
+  
+  top: 0px;
+  left: 0px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.col1{
+  font-family: Quicksand;
+  font-size: 32px;
+}
+.col2{
+  bottom: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+
+}
 .active {
   font-weight: bold;
 }
 ul {
-  width: 1000px;
-  list-style-type: none;
+  list-style-type: none;  
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  /* font-family: Lato; */
+  font-size: 16px;
 }
 ul li {
-  margin-right: 50px;
+  margin-right: 30px;
 }
 </style>
