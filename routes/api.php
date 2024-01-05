@@ -3,6 +3,11 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+//welcome page
+Route::get('/', function () {
+    return view('welcome');
+});
+
 //Categories
 
 Route::get('/categories', function (Request $request) {
@@ -50,8 +55,7 @@ Route::delete('/products/{productID}', function (Request $request) {
 
 Route::get('/categories/{categoryID}/products', function (Request $request) {
     return "Get all products belong to categoryID\n";
-}
-);
+});
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

@@ -16,3 +16,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+// Route::get('/', function () {
+//     $name = session('name', 'Vichea');
+
+//     return view('welcome', compact('name'));
+// });
+
+// Route::get('/change-name/{newName}', function ($newName) {
+//     session(['name' => $newName]);
+
+//     return redirect('/');
+// });
